@@ -1,10 +1,17 @@
 // Завдання 1
 // Отримати масив імен всіх користувачів (поле name).
-import { users } from './users.js';
+
+import users from './users.js';
+
+console.log(users);
+
 const userName = [];
 const getUserNames = (users) => {
   // твій код
-  userName.push(users.name);
+  users.forEach(function (user) {
+    userName.push(user.name);
+  });
+  return userName;
 };
 
 console.log(getUserNames(users));
