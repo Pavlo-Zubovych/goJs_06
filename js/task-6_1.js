@@ -5,9 +5,9 @@ import users from './users.js';
 
 console.log(users);
 
-const userName = [];
 const getUserNames = (users) => {
   // твій код
+  const userName = [];
   users.forEach(function (user) {
     userName.push(user.name);
   });
