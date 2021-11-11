@@ -12,4 +12,7 @@ const getInactiveUsers = (users) => {
   });
 };
 
-console.table(getInactiveUsers(users)); // [об'єкт Moore Hensley, об'єкт Ross Vazquez, об'єкт Blackburn Dotson]
+console.table(getInactiveUsers(users));
+// [об'єкт Moore Hensley,
+// об'єкт Ross Vazquez,
+// об'єкт Blackburn Dotson]
