@@ -5,15 +5,23 @@ import users from './users.js';
 
 console.table(users);
 
-const getUsersWithFriend = (users, friendName) => {
-  return users.reduce(function (acc, user) {
+// const getUsersWithFriend = (users, friendName) => {
+//   return users.reduce(function (acc, user) {
+//     if (user.friends.includes(friendName)) {
+//       acc.push(user.name);
+//     }
+//     return acc;
+//   }, []);
+//   // твій код
+// };
+
+const getUsersWithFriend = (users, friendName) =>
+  users.reduce((acc, user) => {
     if (user.friends.includes(friendName)) {
       acc.push(user.name);
     }
     return acc;
   }, []);
-  // твій код
-};
 
 console.log(getUsersWithFriend(users, 'Briana Decker'));
 // [ 'Sharlene Bush', 'Sheree Anthony' ]

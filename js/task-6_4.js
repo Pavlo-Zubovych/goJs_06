@@ -5,12 +5,14 @@ import users from './users.js';
 
 console.table(users);
 
-const getInactiveUsers = (users) => {
-  // твій код
-  return users.filter(function (user) {
-    return !user.isActive;
-  });
-};
+// const getInactiveUsers = (users) => {
+//   // твій код
+//   return users.filter(function (user) {
+//     return !user.isActive;
+//   });
+// };
+
+const getInactiveUsers = (users) => users.filter((user) => !user.isActive);
 
 console.table(getInactiveUsers(users));
 // [об'єкт Moore Hensley,

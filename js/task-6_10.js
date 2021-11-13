@@ -5,17 +5,26 @@ import users from './users.js';
 
 console.table(users);
 
-const getSortedUniqueSkills = (users) => {
-  return users
-    .reduce(function (acc, user) {
-      return (acc = [...acc, ...user.skills]);
-    }, []) // отримали масив з усіма скілами всіх юзерів
-    .reduce(function (acc, skill) {
+// const getSortedUniqueSkills = (users) => {
+//   return users
+//     .reduce(function (acc, user) {
+//       return (acc = [...acc, ...user.skills]);
+//     }, []) // отримали масив з усіма скілами всіх юзерів
+//     .reduce(function (acc, skill) {
+//       !acc.includes(skill) ? acc.push(skill) : acc;
+//       return acc;
+//     }, []) // тепер в масиві не повторюються скіли
+//     .sort(); // відсортували скіли в алфавітномму порядку;
+// };
+
+const getSortedUniqueSkills = (users) =>
+  users
+    .reduce((acc, user) => (acc = [...acc, ...user.skills]), []) // отримали масив з усіма скілами всіх юзерів
+    .reduce((acc, skill) => {
       !acc.includes(skill) ? acc.push(skill) : acc;
       return acc;
     }, []) // тепер в масиві не повторюються скіли
     .sort(); // відсортували скіли в алфавітномму порядку;
-};
 
 console.log(getSortedUniqueSkills(users));
 
